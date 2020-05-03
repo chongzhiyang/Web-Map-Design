@@ -28,7 +28,7 @@ airPorts= L.geoJson.ajax("assets/airports.geojson", {
     // Then each (point) feature will bind a popup window.
     // The content of the popup window is the value of `feature.properties.company`
     onEachFeature: function (feature, layer) {
-        layer.bindPopup('<h3>'+feature.properties.AIRPT_NAME+'</h3><p>State: '+feature.properties.STATE+'<br>County :'+feature.properties.COUNTY+'<br>City: '+feature.properties.CITY+'<br>Activation Date: '+feature.properties.ACT_DATE+'</p>');
+        layer.bindPopup('<h3>'+feature.properties.AIRPT_NAME+'</h3><p>State: '+feature.properties.STATE+'<br>County: '+feature.properties.COUNTY+'<br>City: '+feature.properties.CITY+'<br>Activation Date: '+feature.properties.ACT_DATE+'</p>');
     },
     pointToLayer: function (feature, latlng) {
         var id = 0;
