@@ -11,7 +11,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(
 
 // 3. Add cell towers GeoJSON Data
 // Null variable that will hold cell tower data
-var cellTowers = null;
+var airPorts = null;
 
 
 // 4. build up a set of colors from colorbrewer's dark2 category
@@ -23,7 +23,7 @@ for (i = 0; i < 9; i++) {
 }
 
 // Get GeoJSON and put on it on the map when it loads
-airPortss= L.geoJson.ajax("assets/airports.geojson", {
+airPorts= L.geoJson.ajax("assets/airports.geojson", {
     // assign a function to the onEachFeature parameter of the cellTowers object.
     // Then each (point) feature will bind a popup window.
     // The content of the popup window is the value of `feature.properties.company`
@@ -43,7 +43,7 @@ airPortss= L.geoJson.ajax("assets/airports.geojson", {
         else { id = 8;} // "Salem Cellular"
         return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
     },
-    attribution: 'Cell Tower Data &copy; Map Cruzin | Oregon counties &copy; Oregon Explorer | Base Map &copy; CartoDB | Made By Bo Zhao'
+    attribution: 'All Airports in the U.S. | Base Map &copy; CartoDB | Made By Chongzhi Yang'
 }).addTo(mymap);
 
 
