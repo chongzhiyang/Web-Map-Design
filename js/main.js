@@ -28,15 +28,15 @@ airPortss= L.geoJson.ajax("assets/airports.geojson", {
     // Then each (point) feature will bind a popup window.
     // The content of the popup window is the value of `feature.properties.company`
     onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.company);
+        layer.bindPopup(AIRPT_NAME);
     },
     pointToLayer: function (feature, latlng) {
         var id = 0;
-        if (feature.CNTL_TWR == "Y") { id = 0; }
+        if (CNTL_TWR == "Y") { id = 0; }
         else { id = 1; } // N
         return L.marker(latlng, {icon: L.divIcon({className: 'fas fa-plane marker-color-' + (id + 1).toString() })});
     },
-    attribution: 'Airports Data &copy; Map Cruzin | US states &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Chongzhi Yang'
+    attribution: 'Airports Data &copy; DATA.GOV | US states &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Chongzhi Yang'
 }).addTo(mymap);
 
 
