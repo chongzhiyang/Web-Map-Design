@@ -15,7 +15,9 @@ This map shows all the airports in the U.S. Each airplane icon represents an air
 ### Libraries
 
 Leaflet
+
 Font Awesome
+
 Google Font
 
 ### Base map
