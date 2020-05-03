@@ -21,3 +21,9 @@ Leaflet
 Font Awesome
 
 Google Font
+
+`chroma.js`
+
+### Credit
+
+`Airports Data &copy; DATA.GOV | US states &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Chongzhi Yang`
