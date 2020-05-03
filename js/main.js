@@ -41,16 +41,16 @@ airPorts= L.geoJson.ajax("assets/airports.geojson", {
 
 
 // 6. Set function for color ramp
-colors = chroma.scale('Oranges').colors(6); //colors = chroma.scale('RdPu').colors(5);
+colors = chroma.scale('Oranges').colors(7); //colors = chroma.scale('RdPu').colors(5);
 
 function setColor(density) {
     var id = 0;
-    if (density > 30) { id = 5; }
-    else if (density > 20 && density <= 30) { id = 4; }
-    else if (density > 15 && density <= 20) { id = 3; }
-    else if (density > 10 && density <= 15) { id = 2; }
-    else if (density > 5 && density <= 10) { id = 1; }
-    else  { id = 0; }
+    if (density > 30) { id = 6; }
+    else if (density > 20 && density <= 30) { id = 5; }
+    else if (density > 15 && density <= 20) { id = 4; }
+    else if (density > 10 && density <= 15) { id = 3; }
+    else if (density > 5 && density <= 10) { id = 2; }
+    else  { id = 1; }
     return colors[id];
 }
 
@@ -84,12 +84,12 @@ legend.onAdd = function () {
     // Create Div Element and Populate it with HTML
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML += '<b># of Airports</b><br />';
-    div.innerHTML += '<i style="background: ' + colors[5] + '; opacity: 0.5"></i><p>31+</p>';
-    div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p>21-30</p>';
-    div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p>16-20</p>';
-    div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p>11-15</p>';
-    div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 6-10</p>';
-    div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0- 5</p>';
+    div.innerHTML += '<i style="background: ' + colors[6] + '; opacity: 0.5"></i><p>31+</p>';
+    div.innerHTML += '<i style="background: ' + colors[5] + '; opacity: 0.5"></i><p>21-30</p>';
+    div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p>16-20</p>';
+    div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p>11-15</p>';
+    div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p> 6-10</p>';
+    div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 0- 5</p>';
     div.innerHTML += '<hr><b>Air Traffic Control Tower<b><br />';
     div.innerHTML += '<i class="fa fa-plane marker-color-1"></i><p> Yes</p>';
     div.innerHTML += '<i class="fa fa-plane marker-color-2"></i><p> No</p>';
