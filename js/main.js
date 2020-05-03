@@ -7,7 +7,7 @@ var mymap = L.map('map', {
     detectRetina: true});
 
 // 2. Add a base map.
-L.tileLayer("assets/us-states.geojson").addTo(mymap);
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 
 // 3. Add cell towers GeoJSON Data
 // Null variable that will hold cell tower data
