@@ -21,7 +21,3 @@ Leaflet
 Font Awesome
 
 Google Font
-
-### Base map
-
-[Stadia Maps](https://stadiamaps.com/), &copy; [OpenMapTiles](https:openmaptiles.org/) &copy; [OpenStreetMap](http://openstreetmap.org)
