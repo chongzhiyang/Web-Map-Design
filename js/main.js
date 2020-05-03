@@ -7,7 +7,7 @@ var mymap = L.map('map', {
     detectRetina: true});
 
 // 2. Add a base map.
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png').addTo(mymap);
 
 // 3. Add cell towers GeoJSON Data
 // Null variable that will hold cell tower data
@@ -28,7 +28,7 @@ airPorts= L.geoJson.ajax("assets/airports.geojson", {
     // Then each (point) feature will bind a popup window.
     // The content of the popup window is the value of `feature.properties.company`
     onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.AIRPT_NAME);
+        layer.bindPopup('<h3>'+feature.properties.AIRPT_NAME+'</h3><p>State: '+feature.properties.STATE+'<br>County :'+feature.properties.COUNTY+'<br>City: '+feature.properties.CITY+'<br>Activation Date: '+feature.properties.ACT_DATE+'</p>');
     },
     pointToLayer: function (feature, latlng) {
         var id = 0;
@@ -36,7 +36,7 @@ airPorts= L.geoJson.ajax("assets/airports.geojson", {
         else { id = 1; } // N
         return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-plane  marker-color-' + (id + 1).toString() })});
     },
-    attribution: 'Airports Data &copy; DATA.GOV | US states &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Chongzhi Yang'
+    attribution: 'Airports Data &copy; DATA.GOV | US states &copy; Mike Bostock of D3 | Base Map &copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="//https:openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors | Made By Chongzhi Yang'
 }).addTo(mymap);
 
 
