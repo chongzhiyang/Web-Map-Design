@@ -1,7 +1,7 @@
 # Airports in the U.S.
 
 ### Introduction
-This map shows all the airports in the U.S. Each airplane icon represents an airport and its location. Viewers can click on airplane icons to get information of the airports, such as state, city, county, and activation date. Zooming out the map, viewers can see the airports' information in Alaska and Hawaii. The color of the airplane icon indicates the information about air traffic control towers for each airport, red means the airport has an air traffic control tower, and blue means no air traffic control tower. Also, each state has a specific color from the color ramp to represent the density of airports in each state, the darker the color means more airports within the state.
+This map shows all the airports in the U.S. Each airplane icon represents an airport and its location. Viewers can click on airplane icons to read the information of the airports, such as state, city, county, and activation date. Zooming out the map, viewers can see the airports' information in Alaska and Hawaii. The color of the airplane icon indicates the information about air traffic control towers for each airport, red means the airport has an air traffic control tower, and blue means no air traffic control tower. Also, each state has a specific color from the color ramp to represent the density of airports in each state, the darker the color means more airports within the state.
 
 ### Image
 #### Click [here](https://chongzhiyang.github.io/Web-Map-Design/) to access the map
